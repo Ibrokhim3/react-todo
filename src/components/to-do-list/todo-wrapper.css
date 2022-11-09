@@ -1,0 +1,15 @@
+
+
+.todo-wrapper{
+  background: #EAEAEA;
+  border: 1px solid #B6B6B6;
+  border-radius: 4px;
+    padding: 24px;
+}
+
+.todo-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
