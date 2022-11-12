@@ -43,15 +43,11 @@ margin-left: 16px;
     background-position: center center;
   }
 
-  .check-item__button{
+  .check-item__delete-button{
     background: transparent;
     width: 48px;
     height: 48px;
     border: none;
     cursor: pointer;
     margin-left: auto;
-
-
   }
-
-

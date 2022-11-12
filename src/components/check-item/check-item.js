@@ -4,13 +4,9 @@ import { useState } from "react";
 import { listItems } from "../list-items/list-items";
 import { logDOM } from "@testing-library/react";
 
-export const CheckItem = ({ item: { name, id } }) => {
-  const [todo, setList] = useState(listItems);
-
-  const HandleDeleteClick = (evt) => {
-    const id = +evt.target.dataset.id;
-    const index = todo.findIndex((item) => item.id === id);
-    setList([...todo.slice(0, index), ...todo.slice(index + 1)]);
+export const CheckItem = ({ item: { name, id }, onDeleteClick }) => {
+  const HandleDeleteClick = () => {
+    onDeleteClick(id);
   };
 
   return (
@@ -20,7 +16,7 @@ export const CheckItem = ({ item: { name, id } }) => {
       <button
         data-id={id}
         onClick={HandleDeleteClick}
-        className="check-item__button"
+        className="check-item__delete-button"
         type="button"
       >
         <img src={trashImg} alt="delete-button" />
